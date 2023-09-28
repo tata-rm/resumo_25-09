@@ -28,13 +28,17 @@ npm init -y
 ```
 npm i express nodemon dotenv
 ```
-
+* i = install (instalar)
+* express = será o servidor da Api
+* nodemon = atualiza os arquivos alterados sem parar o servidor
+* dotenv: gerenciador de variáveis de ambiente
+  
 #### Abrir VSCode
 ```
 code .
 ```
 
-##Criar arquivo .gitignore
+## Criar arquivo .gitignore
 ```
 nano .gtignore
 ```
