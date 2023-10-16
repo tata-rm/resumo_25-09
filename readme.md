@@ -456,3 +456,12 @@ Quando você está criando sua API, vai precisar testar as rotas que serão cria
 ```
 http://localhost:3000
 ```
+* Antes de clicar no botão 'Send' para executar a ação da rota, execute o comando 'npm start' no seu projeto para rodar a API e verifique se o retorno estará conforme a imagem a seguir, ou seja, rodando na porta definida para o servidor.
+
+### URL do repositório com:
+* Estrutura do projeto
+* Arquivo readme de documentação dos passos realizados
+* Configuração
+* Retorno de teste da API
+* Arquivo de rotas com os métodos [GET, POST, PUT, DELETE]
+* Imagem de cada método testado no Insomnia dentro do arquivo readme, conforme exibido na conclusão do passo 4
