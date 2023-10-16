@@ -416,3 +416,43 @@ module.exports = router;
 * Configuração
 * Retorno de teste da API
 * Arquivo de rotas com os métodos [GET, POST, PUT, DELETE]
+
+# Passo 4: Testar rotas da API com o Insomnia
+* Copiar url do repositório no gitHub
+* Clonar repositório no computador com o gitBash
+* Abrir o projeto no VSCode
+* Aprender a utilizar o insomnia
+
+#### Clonar o repositório na sua máquina:
+```
+git clone NOME_REPOSITORIO
+```
+
+#### Acessar pasta:
+```
+cd NOME_REPOSITORIO
+```
+#### Reinstalar os pacotes da aplicação:
+```
+npm i
+```
+
+#### Recriar arquivo .env
+* Definir as variáveis no arquivo .env a partir das chaves definidas no arquivo .env.example
+
+## Insomnia
+Quando você está criando sua API, vai precisar testar as rotas que serão criadas no projeto, é possível utilizar o próprio browser para testar, mas ele só pode enviar requisições do tipo get, e os dados retornados não são apresentados já formatados. Para usar as outras requisições como post, put e delete, será necessário usar softwares de terceiros, e nesse caso, é o insomnia. Ele é um programa open source feito em javascript. O programa é um testador de rotas para APIs, como todos os outros (por exemplo o postman), você coloca a url da API e o caminho da rota.
+
+#### Criar novo projeto:
+
+* Realizar login no aplicativo Insomnia
+* Abrir novo projeto (nome: projeto API)
+* Criar uma coleção de requisições para o projeto (nome: testar rotas do passo 3)
+* Criar a primeira requisição para a API clicando no botão 'New HTTP Request' no método GET
+  * Todas as requisições da coleção ficam listadas no quadro da esquerda. 
+  * Podemos alterar o nome da requisição clicando no ícone de seta para baixo e selecionando a opção 'Rename'.
+  * É importante renomear as requisições para deixarmos personalizadas e com a descrição de responsabilidade de cada requisição.
+* Descrever a url da nossa API com a porta que definimos (http://localhost:3000) e as rotas (/api/listar) que criamos no arquivo rotas.js do passo 3
+```
+http://localhost:3000
+```
