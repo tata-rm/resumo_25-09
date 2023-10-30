@@ -465,3 +465,76 @@ http://localhost:3000
 * Retorno de teste da API
 * Arquivo de rotas com os métodos [GET, POST, PUT, DELETE]
 * Imagem de cada método testado no Insomnia dentro do arquivo readme, conforme exibido na conclusão do passo 4
+
+# Passo 5: Criar controllers para gerenciar as requisições das rotas
+
+* Clonar repositório no computador
+* Acessar pasta
+* Reinstalar pacotes
+* Recriar arquivo .env
+
+Criar pasta 'controllers' dentro da pasta 'src'
+```
+mkdir src/controllers
+```
+
+Criar arquivo 'crudController.js' na pasta 'controllers'
+```
+touch src/controllers/crudController.js
+```
+
+Colar os códigos no arquivo crudController.js
+```
+function listarDados(request, response) {
+    response.send('Retorno de lista de informação do Banco de dados');
+}
+
+function gravarDados(request, response) {
+    response.send('Método utilizado para salvar informações!');
+}
+
+function atualizarDados(request, response) {
+    response.send('Método utilizado para editar informações!');
+}
+
+function deletarDados(request, response) {
+    response.send('Método utilizado para deletar informações!');
+}
+
+module.exports = {
+    listarDados,
+    gravarDados, 
+    atualizarDados, 
+    deletarDados
+}
+```
+
+Alterar o arquivo 'rotas.js'
+```
+// Importar pacote do express
+const { Router } = require('express');
+// Instanciar o Router na variavel router
+const router = Router();
+// Importar funções do controller para a rota acessar as funções
+const { 
+    listarDados,
+    gravarDados,
+    atualizarDados,
+    deletarDados
+ } = require('../controllers/crudController');
+
+router.get('/listar', listarDados);
+
+router.post('/gravar', gravarDados);
+
+router.put('/atualizar/:id', atualizarDados);
+
+router.delete('/deletar/:id', deletarDados);
+
+module.exports = router;
+```
+
+#### TAREFA:
+* Rodar comando 'npm start' para subir no servidor
+* Abrir Insomnia
+* Testar as 4 requisições para os métodos GET, POST, PUT e DELETE e validar os conteúdos de cada rota retornados pelas funções do 'crudController'
